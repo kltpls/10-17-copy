@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{title}} - 이성용의 홈페이지</title>
+    <link href="{{ url_for('static', path='practice.css') }}" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="{{ url_for('static', path='add_two_numbers.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', path='what_time_is_it.js') }}"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="{{ url_for('landing_page') }}">Home</a>
+        <a href="{{ url_for('blog_list') }}">Blog</a>
+        <a href="{{ url_for('about_page') }}">About Me</a>
+    </nav>
+
+    {% block content %}{% endblock %}
+</body>
+
+</html>
